@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validations</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div id="form_body">
+        <div id="form_container">
+          <div class="form_input">
+            <!-- <label for="email">Email</label> -->
+            <input
+              id="email"
+              type="email"
+              placeholder="Example@gmail.com"
+              autocomplete="off"
+            />
+            <div class="error displayEmail">
+              Make sure email is more then 3 characters and has @ and a.
+            </div>
+            <i class="fa fa-check checkBox" aria-hidden="true"></i>
+          </div>
+          <div class="form_input">
+            <!-- <label for="password">Password</label> -->
+            <input id="password" type="password" placeholder="Password" />
+            <div class="error displayPassword">
+              Make sure password is more then 3 characters
+            </div>
+            <i class="fa fa-check checkBox" aria-hidden="true"></i>
+          </div>
+        </div>
+        <p class="errorFree displayErrorFree">All good to go</p>
+        <div>
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

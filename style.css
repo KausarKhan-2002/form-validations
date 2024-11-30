@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+:root {
+  --blueColor: rgb(61, 200, 255);
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+body {
+  /* background: url("https://wallpaperaccess.com/full/95233.jpg"); */
+  background: url("https://wallpaperset.com/w/full/4/0/7/31732.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+}
+
+#form_body {
+  backdrop-filter: blur(3px);
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0 0 15px 0px rgba(16, 54, 69, 0.591);
+}
+
+#form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input {
+  width: 400px;
+  padding: 10px 30px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--blueColor);
+  outline: none;
+  color: var(--blueColor);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+::placeholder {
+  color: rgba(61, 200, 255, 0.534);
+}
+
+.error {
+  color: red;
+  margin-top: 0.3rem;
+}
+
+#submit {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 30px;
+  border: none;
+  outline: none;
+  padding: 7px 12px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: var(--blueColor);
+  border: 1px solid var(--blueColor);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  overflow: hidden;
+  z-index: 999;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#submit:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--blueColor);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  z-index: -5;
+}
+
+#submit:hover {
+  color: #111;
+}
+
+#submit:hover:before {
+  width: 100%;
+}
+
+.errorFree {
+  color: rgb(64, 255, 137);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.displayEmail,
+.displayPassword,
+.displayErrorFree {
+  margin-left: 0.5rem;
+  visibility: hidden;
+}
+.errorFree {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  font-size: 0.1rem;
+  transition: .4s ease-in-out;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -ms-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+}
+
+.form_input {
+  position: relative;
+}
+
+.checkBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: green;
+  display: none;
+}
+
+.addCheck1,
+.addCheck2 {
+  display: inline-block;
+}
